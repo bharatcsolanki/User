@@ -1,14 +1,40 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      User Registration
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="page-home">
+    
+  <form (submit)="processForm()" [formGroup]="form">
+      <ion-list>
+          
+      <ion-item>
+             <ion-input formControlName="firstName" type="text" placeholder="First Name"></ion-input>
+      </ion-item>
+
+     
+      <ion-item>
+        <ion-input formControlName="lastName" type="text" placeholder="Last Name"></ion-input>
+      </ion-item>
+	  
+	  <ion-item>
+        <ion-input formControlName="emailId" type="email" placeholder="Email Id"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input formControlName="mobNo" type="text" placeholder="Mobile"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input formControlName="city" type="text" placeholder="City"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <div padding>
+      <button ion-button block type="submit">Create Account</button>
+    </div>
+  </form>
 </ion-content>
